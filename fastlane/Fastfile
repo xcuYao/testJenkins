@@ -30,7 +30,7 @@ platform :ios do
   sh 'git push origin develop'
   
   # pod install
-  cocoapods(repo_update: false)
+  # cocoapods(repo_update: false)
 
   # 打包上传到 TestFlight
   lane :tf do
