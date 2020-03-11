@@ -6,7 +6,7 @@ target 'jenkins' do
   use_frameworks!
 
   # Pods for jenkins
-  pod 'YYKit', '~> 1.0.9'
+#  pod 'YYKit', '~> 1.0.9'
 
 
   target 'jenkinsTests' do
