@@ -16,6 +16,12 @@
 default_platform(:ios)
 
 platform :ios do
+
+  before_all do
+    ENV["FASTLANE_APPLE_APPLICATION_SPECIFIC_PASSWORD"] = "kmmh-zcyd-yrrc-lhha"
+    ENV["FASTLANE_SESSION"] = '---\n- !ruby/object:HTTP::Cookie\n  name: DES59c371cb04e75e0387da9b357f7eea945\n  value: HSARMTKNSRVXWFla4MT9fKxeLXtNnBu7DiCmO4JvVf2VQ1S9cseQlu6d/7scS89mb5zqlh17R1mleNcCHsEezWcQHOXygL9yUe5oquiPhkcGuelceDzD5pVortrCeVzWvrQw2g==SRVX\n  domain: idmsa.apple.com\n  for_domain: true\n  path: "/"\n  secure: true\n  httponly: true\n  expires: \n  max_age: 2592000\n  created_at: &1 2020-03-11 23:27:57.986668000 +08:00\n  accessed_at: *1\n- !ruby/object:HTTP::Cookie\n  name: myacinfo\n  value: DAWTKNV29c05e7cd20b101a6d57c96746f9b0f66cf3609279d7a186a81c874fb2adc49e13853e2325ebeea5a30ca2ed19c2aca11ec18d2c3059efb82118a0a90853e40cf5cd23f8636dfc91d5112cf93aee6b1949df725531f55d2a7d018fe66930d02239dbb065f9a2e6286cb93ca5a8297cda8b90b6c55c56f64ce3858e730b08d18fbb9cad8475329c7b77634c4a3a618c93d85f7cafd56ae682523c3cdd8ecb5f547e6a1026bbb7373fe7a6ca7f75144073bd02da1727b1c8041ff96317c8c5b979a21db266fdfb31c6294ac1dbe537fd345db15b14838719523e6d3699e7ecd6fb9e0d4b463c53c4815271d47b50ede5d0bfe27e195151fd70a706b7b9a3162b89665d4241073cc5ea056234e5ef01988b8f05a739d8928555e064b726eb93eeb2c1aab5b911308a4211255592efd697da6d7ae72c2b4be4868d311831bd7486382ff954dc65c53ccfdb7eb5ab56628f273926127cb2ffcaa87ea0f3f5a97e25c4977de7cc934e6ddb5ef323f924f5f5ca761656530373761363935316564363831333962633161643334336436323938353337373030343361MVRYV2\n  domain: apple.com\n  for_domain: true\n  path: "/"\n  secure: true\n  httponly: true\n  expires: \n  max_age: \n  created_at: 2020-03-11 23:27:57.986885000 +08:00\n  accessed_at: 2020-03-12 02:34:32.118419000 +08:00\n- !ruby/object:HTTP::Cookie\n  name: dqsid\n  value: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1ODM5NTEzNDUsImp0aSI6ImFXYkdobDNlQ3FySE9YY0MxTGxvZlEifQ.eH84K12WllQ4836DKv9BqYwp5S2KFNFSvou7P_zIx8A\n  domain: appstoreconnect.apple.com\n  for_domain: false\n  path: "/"\n  secure: true\n  httponly: true\n  expires: \n  max_age: 1799\n  created_at: &2 2020-03-12 02:34:32.704016000 +08:00\n  accessed_at: *2\n'
+  end
+
   # 切到 develop 分支
   sh 'git checkout develop'
   # 代码
