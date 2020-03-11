@@ -16,26 +16,16 @@
 default_platform(:ios)
 
 platform :ios do
-  desc "Push a new beta build to TestFlight"
-  lane :beta do
-    build_app(scheme: "jenkins")
-    upload_to_testflight
-  end
-end
-
-default_platform(:ios)
-
-platform :ios do
   # 切到 develop 分支
   sh 'git checkout develop'
   # 代码
   git_pull
   # build 号加1
   increment_build_number_in_plist(
-    target: "xxx"
+    target: "jenkins"
   )
   # 下面是拿到新的版本号，提交代码
-  build_number = get_build_number_from_plist(target: "xxx")
+  build_number = get_build_number_from_plist(target: "jenkins")
   git_commit(path:".", message:"Bump build to #{build_number}")
   sh 'git push origin develop'
   
@@ -46,27 +36,11 @@ platform :ios do
   lane :tf do
     desc "Push a new beta build to TestFlight"
     build_app(
-      workspace: "xxx.xcworkspace", 
-      scheme: "xxx"
+      workspace: "jenkins.xcworkspace", 
+      scheme: "jenkins"
     )
     # 上传到 TestFlight，这里是上传完成就结束了，不等到到苹果那边处理完
     upload_to_testflight(skip_waiting_for_build_processing: true)
   end
 
-  # 打测到包到第三方平台，这里是走的蒲公英
-  lane :adhoc do
-    desc "Push a new beta build to pgyer"
-    # 这里是打的 Debug 版本
-    build_app(
-      workspace: "xxx.xcworkspace", 
-      configuration: "Debug", 
-      scheme: "xxx", 
-      export_method: "development"
-    )
-    # 上传版本到蒲公英平台
-    pgyer(
-      api_key: "xxxxx", 
-      user_key: "xxxxx"
-    )
-  end
 end
