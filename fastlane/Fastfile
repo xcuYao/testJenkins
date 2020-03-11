@@ -40,6 +40,7 @@ platform :ios do
       scheme: "jenkins"
     )
     # 上传到 TestFlight，这里是上传完成就结束了，不等到到苹果那边处理完
+    ENV["DELIVER_ITMSTRANSPORTER_ADDITIONAL_UPLOAD_PARAMETERS"] = "-t Aspera"
     upload_to_testflight(skip_waiting_for_build_processing: true)
   end
 
