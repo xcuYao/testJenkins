@@ -47,7 +47,7 @@
 		9C6F4F18FD63E683436CC4FF /* Pods-jenkinsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jenkinsTests.release.xcconfig"; path = "Target Support Files/Pods-jenkinsTests/Pods-jenkinsTests.release.xcconfig"; sourceTree = "<group>"; };
 		A993982C375B9AB8BFE61FA1 /* Pods-jenkinsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-jenkinsTests.debug.xcconfig"; path = "Target Support Files/Pods-jenkinsTests/Pods-jenkinsTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B87A7A53D437A8EC8D622F9A /* Pods_jenkinsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_jenkinsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD9FF98E24193617006B0EB2 /* jenkins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jenkins.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD9FF98E24193617006B0EB2 /* jenkinsYaoning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jenkinsYaoning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD9FF99124193617006B0EB2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD9FF99324193617006B0EB2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BD9FF99524193617006B0EB2 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,7 +119,7 @@
 		BD9FF98F24193617006B0EB2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BD9FF98E24193617006B0EB2 /* jenkins.app */,
+				BD9FF98E24193617006B0EB2 /* jenkinsYaoning.app */,
 				BD9FF9A42419361E006B0EB2 /* jenkinsTests.xctest */,
 				BD9FF9AF2419361E006B0EB2 /* jenkinsUITests.xctest */,
 			);
@@ -194,7 +194,7 @@
 			);
 			name = jenkins;
 			productName = jenkins;
-			productReference = BD9FF98E24193617006B0EB2 /* jenkins.app */;
+			productReference = BD9FF98E24193617006B0EB2 /* jenkinsYaoning.app */;
 			productType = "com.apple.product-type.application";
 		};
 		BD9FF9A32419361E006B0EB2 /* jenkinsTests */ = {
@@ -557,7 +557,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.yaoning.jenkins;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = jenkinsYaoning;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -578,7 +578,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = me.yaoning.jenkins;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = jenkinsYaoning;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
